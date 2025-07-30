@@ -1,0 +1,25 @@
+name: ♻️ Refactor or Code Cleanup
+description: Suggest improvements to code structure without changing behavior
+title: "♻️ - "
+labels:
+  - refactor
+body:
+  - type: textarea
+    attributes:
+      label: ↪️ What should be refactored?
+      description: Describe the area of the codebase and the reasoning.
+  - type: textarea
+    attributes:
+      label: ‼️ Why is this important?
+      description: Explain the benefit of this change to the maintainability or clarity of the code.
+  - type: checkboxes
+    id: policy-agreement
+    attributes:
+      label: ☑️ Policy Agreement
+      description: Please confirm that you have read and the following contributing policies. We require
+        that everyone agrees to them.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](././blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I agree to follow this project's [Contributing Guidelines](././blob/main/.github/CONTRIBUTING.md)
+          required: true

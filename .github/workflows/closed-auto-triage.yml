@@ -1,0 +1,36 @@
+name: "Contribution Closed - Auto Triage"
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed, converted_to_draft]
+  issues:
+    types: [closed]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  Triage:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'issues' || 
+      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+    name: Contribution by ${{github.actor}} - Auto Triage
+    steps:
+        - name: ⚙️ Checkout Repo
+          uses: actions/checkout@v4
+          with:
+            path: configRepo
+            
+        - name: 📋 End Triage
+          uses: actions/github-script@v7
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            script: |
+              const endTriage = require('./configRepo/.github/scripts/auto-triage/end.js');
+              await endTriage({ github, context, core });
+
+        - name: 🥳 Success
+          run: echo Triage has completed successfully!

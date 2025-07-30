@@ -1,0 +1,37 @@
+name: "New Contribution - Auto Triage"
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, ready_for_review]
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  Triage:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'issues' || 
+      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+    name: Contribution by ${{github.actor}} - Auto Triage
+    steps:
+        - name: ⚙️ Checkout Repo
+          uses: actions/checkout@v4
+          with:
+            path: configRepo
+            
+        - name: 📋 Start Triage
+          uses: actions/github-script@v7
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            script: |
+              const startTriage = require('./configRepo/.github/scripts/auto-triage/start.js');
+              await startTriage({ github, context, core })
+
+        - name: 🥳 Success
+          run: echo Triage has completed successfully!
+           
