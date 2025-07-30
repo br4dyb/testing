@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Requesting a feature or have questions?
+    url: https://sample/url
+    about: Please visit the 'Discussions Tab' instead of creating a new issue.

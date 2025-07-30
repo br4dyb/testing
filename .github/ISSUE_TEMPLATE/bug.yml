@@ -1,0 +1,33 @@
+name: "🐛 Bug Report"
+description: "Report a reproducible bug"
+title: "🐛 - "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: ✏️ Brief Description
+      description: "Simply describe the issue you're encountering."
+      placeholder: "When clicking ... this errors..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🪜 Steps to Reproduce
+      description: "List the exact steps to reproduce the issue."
+      placeholder: "1. Go to...\n2. Click on...\n3. Error appears"
+    validations:
+      required: true
+  - type: checkboxes
+    id: policy-agreement
+    attributes:
+      label: ☑️ Policy Agreement
+      description: Please confirm that you have read and the following contributing policies. We require
+        that everyone agrees to them.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](././blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I agree to follow this project's [Contributing Guidelines](././blob/main/.github/CONTRIBUTING.md)
+          required: true

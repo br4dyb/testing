@@ -1,0 +1,28 @@
+name: 📚 Documentation Issue
+description: Report issues related to the documentation
+title: "📚 - "
+labels:
+  - docs
+body:
+  - type: textarea
+    attributes:
+      label: 🤨 What's wrong?
+      description: Describe the issue with the documentation.
+      placeholder: The setup instructions are missing a step...
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 📍 Location
+      description: Provide a link or file path to where the documentation needs fixing.
+  - type: checkboxes
+    id: policy-agreement
+    attributes:
+      label: ☑️ Policy Agreement
+      description: Please confirm that you have read and the following contributing policies. We require
+        that everyone agrees to them.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](././blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I agree to follow this project's [Contributing Guidelines](././blob/main/.github/CONTRIBUTING.md)
+          required: true

@@ -1,0 +1,88 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Environment files
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Vite cache
+.vite/
+
+# Nuxt
+.nuxt/
+.output/
+
+# Remix
+.cache/
+
+# SvelteKit
+.svelte-kit/
+
+# Vue
+*.local
+*.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc
+*.tgz
+*.gz
+*.zip
+*.swp
+
+# Git
+*.orig
+
+# TypeScript
+*.tsbuildinfo
+
+# Mac quick look
+.AppleDouble
+.LSOverride
+
+# Firebase
+.firebase/
+.firebaserc
+
+# Storybook
+.out/
+.storybook-out/
+
+# Playwright
+test-results/
+.playwright/
+
+# Optional lock files (depending on preference)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
