@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       deleteUnmatched:
-        description: 'Delete lables not in config?'
+        description: 'Delete labels not in config?'
         options:
           - 'Delete Unmatched'
           - 'Keep Unmatched'

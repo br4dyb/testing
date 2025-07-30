@@ -91,7 +91,7 @@ module.exports = async ({github, context, core}, deleteUnmatched = false) => {
                     core.info(`➕ Created label: ${label.name}`);
                 } else {
                     // Unknown error:
-                    console.log('An error occured when checking label existence', error);
+                    console.log('An error occurred when checking label existence', error);
                     throw error;
                 }
             }
