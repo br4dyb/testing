@@ -21,7 +21,7 @@ All changes must go through a pull request:
 
 1. **Create an Issue** (for bug reports or actionable features).
 2. **Create a feature branch** from `main` (never commit directly to `main`).
-3. **Open a Pull Request** linked to the relavant Issue(s).
+3. **Open a Pull Request** linked to the relevant Issue(s).
 4. **Request a review** and wait for approval before merging.
 
 🔒 Branch protection rules are enabled to ensure code review and test safety.

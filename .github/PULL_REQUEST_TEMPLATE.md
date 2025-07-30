@@ -23,10 +23,10 @@ Ex: 'Closes #123', 'Fixes #456', 'Resolves #789'
 
 ## 📸 Screenshots or Logs: (Optional)
 
-<!--
+<!---------------------------------------------------
 If this PR changes the UI or has visual/log output, 
 consider attaching screenshots or logs here if applicable.
--->
+---------------------------------------------------->
 
 
 ---
