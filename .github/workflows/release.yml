@@ -11,3 +11,16 @@ jobs:
 
             - name: Instal Dependencies
               run: npm ci
+
+            - name: Initialize Git User
+              run: |
+                git config --global user.email "sessionsbot@sessionsbot.fyi"
+                git config --global user.name "Sessions Bot - Releases"
+
+            - name: Publish Release
+              run: npx release-it
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Completed
+              run: echo 🚀 Release Published
