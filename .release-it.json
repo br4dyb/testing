@@ -1,5 +1,8 @@
 {
   "$schema": "https://unpkg.com/release-it/schema/release-it.json",
+  "hooks": {
+    "before:init": "echo 🚀 Release Initiated!"
+  },
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": {
@@ -12,7 +15,7 @@
         {"type": "style", "section": "🎨 Styling"},
         {"type": "refactor", "section": "♻️ Refactoring"},
         {"type": "perf", "section": "📈 Performance"},
-        {"type": "test", "section": "🧪 Tests:"}
+        {"type": "test", "section": "🧪 Tests"}
       ]
     },
       "infile": "CHANGELOG.md",
@@ -29,12 +32,12 @@
     "release": true,
     "releaseName": "v${version}",
     "comments": {
-      "submit": false,
+      "submit": true,
       "issue": ":rocket: _This issue has been resolved in v${version}. See [${releaseName}](${releaseUrl}) for release notes._",
       "pr": ":rocket: _This pull request is included in v${version}. See [${releaseName}](${releaseUrl}) for release notes._"
     }
   },
   "npm": {
-    "publish": true
+    "publish": false
   }
 }
