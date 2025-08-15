@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 (2025-08-15)
+
+### 🐞 Bug Fixes
+
+* release perms ([70b763e](https://github.com/br4dyb/testing/commit/70b763e3b153222b92795d015df1687f35466696))
+
 ## 1.0.0 (2025-08-01)
 
 ### ⚡️ Features
