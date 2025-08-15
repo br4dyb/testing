@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2](https://github.com/br4dyb/testing/compare/1.0.1...1.0.2) (2025-08-15)
+
+### 🐞 Bug Fixes
+
+* fetch depth ([c0d9745](https://github.com/br4dyb/testing/commit/c0d9745d111a8624d3d23cecaf97165816c7e8cf))
+
 ## 1.0.1 (2025-08-15)
 
 ### 🐞 Bug Fixes
