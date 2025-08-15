@@ -2,6 +2,12 @@ name: "Release"
 
 on: workflow_dispatch
 
+permissions:
+  contents: write   # needed for pushing tags, changelog commits
+  issues: write     
+  pull-requests: write 
+
+
 jobs:
     release:
         runs-on: ubuntu-latest
